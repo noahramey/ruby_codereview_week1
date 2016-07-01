@@ -10,6 +10,6 @@ end
 get("/sentence") do
   @sentence = params.fetch("sentence")
   @word = params.fetch("word")
-  @results = @sentence.word_count(@word)
+  @results = @sentence.word_count(@word).to_s
   erb(:results)
 end
