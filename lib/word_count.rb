@@ -1,11 +1,11 @@
 class String
   define_method(:word_count) do |word|
     split_phrase = self.downcase().split(" ")
-    word = word.downcase()
+    original_word = word.downcase()
     total = 0
 
     split_phrase.each do |i|
-      if (i == word)
+      if (i == original_word)
         total += 1
       end
     end
