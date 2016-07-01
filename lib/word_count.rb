@@ -1,6 +1,7 @@
 class String
   define_method(:word_count) do |word|
-    split_phrase = self.split(" ")
+    split_phrase = self.downcase().split(" ")
+    word = word.downcase()
     total = 0
 
     split_phrase.each do |i|
@@ -13,7 +14,7 @@ class String
     else
       total
     end
-    
+
     total
   end
 end

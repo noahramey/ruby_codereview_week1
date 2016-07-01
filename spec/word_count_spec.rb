@@ -13,4 +13,8 @@ describe('String#word_count') do
   it("returns the phrase 'Your word is not in the sentence you inputted.' if the word is not in the sentence") do
     expect("Peter had 2 dogs, 2 cats, and 2 gerbils.".word_count('horse')).to(eq('Your word is not in the sentence you inputted.'))
   end
+
+  it("retains basic functionality regardless of letter case.") do
+    expect("Peter has a dog named Paul and also a cat named paul".word_count('Paul')).to(eq(2))
+  end
 end
